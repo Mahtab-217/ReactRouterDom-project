@@ -1,47 +1,30 @@
 import { Link } from "react-router-dom";
 import Nav from "./Nav";
-
+import { StList } from "../public/db";
 const Student = ()=>{
-const StList=[
-    {
-        id:1,
-        name:"Ali",
-        LastName:"Alizada",
-        score:90,
-        grade:12,
-        details: "He is a great studetn"
-    },
-    {
-        id:2,
-        name:"Ahmad",
-        LastName:"Rahmati",
-        score:99,
-        grade:10,
-        details: "He is a great studetn"
-    },
-    {
-        id:3,
-        name:"Khalid",
-        LastName:"Naqawi",
-        score:80,
-        grade:8,
-        details: "He is a great studetn"
-    },
-]
+
     return (
         <div>
             <Nav/>
             <ol>
-               <li style={
-                {listStyleType:"none" }
-               }>
-                {StList.map(person=>(
-                <Link style={{ 
-                    color:"black",
-                    textDecoration:"none"
-                }} to="">{person.name}</Link>
-               ))}
-               </li>
+               {StList.map((person)=>(
+                <li key={person.id}
+                style={{listStyleType:"none",
+                    margin:"12px",
+                    textDecoration:"underline",
+
+                }}
+                >
+                    <Link style={{
+                        color:"black",
+                        fontSize:"32px",
+                        textDecoration:"none",
+                    }} to=""/>
+                    {person.name}
+
+                </li>
+               )
+               )}
             </ol>
         </div>
     )

@@ -23,7 +23,7 @@ export default function Nav(){
         <ul>
            
            {list.map((item)=>(
-                <li>
+                <li key={list.link }>
                <Link to={item.link}>{item.name}</Link>
                 </li>
             ))}
