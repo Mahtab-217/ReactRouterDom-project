@@ -23,4 +23,24 @@ export const StList=[
         grade:8,
         details: "He is a great studetn"
     },
+];
+export const schools=[
+    {
+        id: 1,
+        name: "Austad Sharifi",
+        manager: "Esmat Ghulami",
+        details: "This is a high school for male students",
+    },
+    {
+        id: 2,
+        name: "Bibi Zahra",
+        manager: "Zohra Qurbani",
+        details: "This is a high school for female students ",
+    },
+    {
+        id: 3,
+        name: "Hutqol Angori",
+        manager: "Ahmad Shojaie",
+        details: "This is a high school for male students",
+    },
 ]
