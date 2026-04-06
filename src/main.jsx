@@ -7,6 +7,7 @@ import About from './About.jsx'
 import Contact from './Contact.jsx'
 import Student from './Students.jsx'
 import Details from './Details.jsx'
+import Schools from './Schools.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')).render(
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/student' element={<Student/>}/>
       <Route path='/student/:id' element={<Details/>}/>
+      <Route path='maktab' element={<Schools/>}/>
     </Routes>
     </BrowserRouter>
   </StrictMode>,

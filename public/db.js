@@ -24,7 +24,7 @@ export const StList=[
         details: "He is a great studetn"
     },
 ];
-export const schools=[
+export const schoolsList=[
     {
         id: 1,
         name: "Austad Sharifi",
