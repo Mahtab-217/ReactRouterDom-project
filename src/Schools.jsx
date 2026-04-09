@@ -6,7 +6,7 @@ export default function Schools(){
             <h1>These are the lists of nearby schools</h1>
             <ul>
                 {schoolsList.map((s)=>(    
-                    <Link key={s.id} to="">{s.name}</Link>
+                    <Link key={s.id} to={`/maktab/${s.id}`}>{s.name}</Link>
                    
                 ))}
             </ul>
