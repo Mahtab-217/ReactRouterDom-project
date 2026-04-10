@@ -24,12 +24,19 @@ export default function(){
             )}
             {list.length>0&&(
                 <div>
-                    <table>
+                    <table className="border w-full">
                         <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
+                            <th className="border py-1 px-3 text-center">Name</th>
+                            <th className="border py-1 px-3 text-center">Email</th>
+                            <th className="border py-1 px-3 text-center">Phone</th>
                         </tr>
+                       {list.map(user=>(
+                        <tr>
+                            <td className="border py-1 px-3 text-center">{user.name}</td>
+                            <td className="border py-1 px-3 text-center">{user.email}</td>
+                            <td className="border py-1 px-3 text-center">{user.phone}</td>
+                        </tr>
+                       ))}
                     </table>
                 </div>
             )}
