@@ -1,16 +1,17 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function(){
     const [qimat,setqimat]=useState(0);
-    
+    useEffect(greet, [qimat]);
+    function greet(){
+        console.log("Hello")
+    }
     return(
         <div>
             <h1 className="text-5xl text-center">
-                0
+                {qimat}
             </h1>
-            <p className="
-            font-bold text-2xl font-bold
-            ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores magni eligendi ullam exercitationem sed similique! Distinctio neque dolorem consequuntur magnam. Quos similique ratione quidem reprehenderit dolorum recusandae molestias, at repellat.</p>
+            <button className="py-2 px-5 bg-orange-600 rounded-md" onClick={()=>setqimat(qimat+1)}>Add Number </button>
             <hr />
             <button className="bg-orange-700 jutify-center py-2 px-5" onClick={()=>setqimat(qimat+1)}></button>
         </div>
