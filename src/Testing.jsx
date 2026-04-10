@@ -1,3 +1,4 @@
+import "tailwindcss";
 import { useEffect, useState } from "react"
 
 export default function(){
@@ -23,7 +24,7 @@ export default function(){
                 </div>
             )}
             {list.length>0&&(
-                <div>
+                <div className="max-w-6xl mx-auto">
                     <table className="border w-full">
                         <tr>
                             <th className="border py-1 px-3 text-center">Name</th>
