@@ -4,6 +4,14 @@ export default function(){
     let [qimat,setqimat]=useState(0);
     useEffect(greet, [qimat]);
     let [list, setList]=useState([]); 
+    useEffect(()=>{
+        async function getData(){
+            const data= await fetch("https://jsonplaceholder.typicode.com/users");
+            const jsonData=await data.json();
+            setList(jsonData);
+        }
+        getData();
+    },[list]);
     function greet(){
         console.log("The value changed")
     }
@@ -12,6 +20,17 @@ export default function(){
             {list.length ===0 &&(
                 <div>
                     <h1>No user exists</h1>
+                </div>
+            )}
+            {list.length>0&&(
+                <div>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                        </tr>
+                    </table>
                 </div>
             )}
             {/* <h1 className="text-5xl text-center">
